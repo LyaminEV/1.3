@@ -284,6 +284,7 @@ button::-moz-focus-inner {
     }
     .tabs__link:last-child {
         margin-left: 8px;
+        margin-top: 10px;
     }
     .decay, .decay__right {
         display: none;
