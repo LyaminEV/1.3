@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя." />
+    <meta name="description"
+        content="Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя." />
     <meta name="description" conent="ремонт техники, сервисный центр, ремот техники DELL" />
     <title>CPS</title>
     <link rel="stylesheet" href="css/style.css" />
@@ -13,9 +14,11 @@
 <body>
     <div class="container">
         <header class="header">
-            <div class="header__block-left">
+            <div class="block-left">
                 <button class="button button__menu">
-                    <div class="button__menu-icon"></div>
+                    <div class="button__call-circle">
+                        <div class="button__menu-icon"></div>
+                    </div>
                 </button>
                 <div class="separator separator-1"></div>
                 <div class="logo">
@@ -24,22 +27,32 @@
                     </a>
                 </div>
             </div>
-            <div class="header__block-right">
+            <div class="block-right">
                 <button class="button button__call">
-                    <div class="button__call-icon"></div>
+                    <div class="button__call-circle">
+                        <div class="button__call-icon"></div>
+                    </div>
                 </button>
                 <button class="button button__chat">
-                    <div class="button__chat-icon"></div>
+                    <div class="button__call-circle">
+                        <div class="button__chat-icon"></div>
+                    </div>
                 </button>
                 <button class="button button__profile">
-                    <div class="button__profile-icon"></div>
+                    <div class="button__call-circle">
+                        <div class="button__profile-icon"></div>
+                    </div>
                 </button>
                 <div class="separator separator-2"></div>
                 <button class="button button__request">
-                    <div class="button__request-icon"></div>
+                    <div class="button__call-circle">
+                        <div class="button__request-icon"></div>
+                    </div>
                 </button>
                 <button class="button button__status">
-                    <div class="button__status-icon"></div>
+                    <div class="button__call-circle">
+                        <div class="button__status-icon"></div>
+                    </div>
                 </button>
             </div>
         </header>
@@ -47,6 +60,20 @@
             <div class="title">
                 <h1 class="title__text">Услуги и сервисы
                 </h1>
+                <div class="title__buttons">
+                    <button class="button button__request">
+                        <span>Оставить заявку</span>
+                        <div class="button__call-circle">
+                            <div class="button__request-icon"></div>
+                        </div>
+                    </button>
+                    <button class="button button__status">
+                        <span>Статус ремонта</span>
+                        <div class="button__call-circle">
+                            <div class="button__status-icon"></div>
+                        </div>
+                    </button>
+                </div>
             </div>
             <div class="tabs">
                 <div class="tabs__nav">
@@ -66,11 +93,13 @@
                         <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
                             отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
 
-                        <p class="about-us__text--hdden--320">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                        <p class="about-us__text--hdden--320">Мы успешно работаем с 1992 года и заслужили репутацию
+                            надежного партнера
                             <span class="about-us__text--hdden--768">, что подтверждает
-                            большое
-                            количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-                            очередь, советуют нас родным и близким.</span>
+                                большое
+                                количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                                и, в свою
+                                очередь, советуют нас родным и близким.</span>
                         </p>
                         <div class="more">
                             <button class="more__button">
@@ -78,9 +107,9 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="photo-cps">
-                    <img src="img/photo-cps.png" alt="">
+                    <div class="photo-cps">
+                        <img src="img/photo-cps.png" alt="Фотография сервисного центра">
+                    </div>
                 </div>
             </div>
         </main>
