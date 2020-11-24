@@ -29,7 +29,6 @@ body {
     max-width: 1120px;
     background: #F8F8F8;
     font-family: 'TT Lakes';
-    font-weight: 400;
     font-size: 14px;
     color:  #1B1C21;
     margin: 0 auto;
@@ -66,7 +65,10 @@ button::-moz-focus-inner {
     justify-content: center;
     background-color: transparent;
 }
-.button__call-circle{
+.button__lable {
+    display: none;
+}
+.button__circle{
     margin: 0 8px;
     width: 40px;
     height: 40px;
@@ -76,17 +78,10 @@ button::-moz-focus-inner {
     align-items: center;
     justify-content: center;
 }
-.button__menu-icon {
+.button-menu__icon {
     width: 18px;
     height: 16px;
     background-image: url(../img/burger-menu-icon.svg);
-}
-.separator {
-    width: 2px;
-    height: 32px;
-    margin: 0 12px;
-    background: #EAEAEA;
-    border-radius: 1px;
 }
 .logo {
     margin: 0 4px 0 8px;
@@ -96,35 +91,43 @@ button::-moz-focus-inner {
     height: 52px;
     background-image: url(../img/Logo.svg);
 }
-.separator-1, .button__call, .button__chat, .button__profile {
+.button-call, .button-chat, .button-profile {
     display: none;
 }
-.button__call-icon {
+.button-call__icon {
     width: 18px;
     height: 18px;
     background-image: url(../img/call-icon.svg);
 }
-.button__chat-icon {
+.button-chat__icon {
     width: 20px;
     height: 20px;
     background-image: url(../img/chat-icon.svg);
 }
-.button__profile-icon {
+.button-profile__icon {
     width: 20px;
     height: 18px;
     background-image: url(../img/profile-icon.svg);
 }
-.button__request-icon {
+.button-request::before{
+    content: '';
+    width: 2px;
+    height: 32px;
+    margin: 0 12px;
+    background: #EAEAEA;
+    border-radius: 1px;
+}
+.button-request__icon {
     width: 20px;
     height: 20px;
     background-image: url(../img/request-icon.svg);
 }
-.button__status-icon {
+.button-status__icon {
     width: 16px;
     height: 20px;
     background-image: url(../img/status-icon.svg);
 }
-.title {
+.main__title {
     border-left: 4px solid  #41F6D7;
     border-top: 4px solid transparent; 
     border-bottom: 4px solid transparent;
@@ -132,13 +135,11 @@ button::-moz-focus-inner {
     margin: 24px 0;
     display: flex;
     justify-content: space-between;
-}
-.title__text {
     font-size: 28px;
     font-family: 'TT Lakes-Bold';
-
     line-height: 40px;
 }
+
 
 .title__buttons {
     display: none;
@@ -148,14 +149,14 @@ button::-moz-focus-inner {
     justify-content: space-between;
     overflow-x: auto;
 }
-.decay{
+.tabs__nav::before, .tabs__nav::after {
+    content: "";
     position: absolute;
     width: 16px; /* меньше чем справа что бы рамку activ не осветляло(в ширину отступа)*/
     height: 40px; 
-    background-color: red;
-    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);  
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); 
 }
-.decay__right {
+.tabs__nav::after {
     width: 24px;
     right: 0;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
@@ -173,8 +174,9 @@ button::-moz-focus-inner {
     margin-right: 20px;
     white-space: nowrap;
     text-decoration: none;
+    font-family: "TT Lakes-Medium";
     font-size: 16px;
-    line-height: 24px;
+    line-height: 36px;
     color: #7E7E82;
     ;
 
@@ -192,16 +194,15 @@ button::-moz-focus-inner {
 .about-us__text {
     padding: 0 16px;
     line-height: 18px;
+    line-height: 20px;
 }
-.more {
-    margin: 16px 0;
-}
-.about-us__text--hdden--320 {
+.about-us__text--hdden {
     display: none;
 }
 .more__button {
     border: 0;
     padding-left: 24px;
+    margin: 16px 0;
     background-color: transparent;
     font-family: 'TT Lakes-Medium';
     font-size: 16px;
@@ -216,17 +217,38 @@ button::-moz-focus-inner {
     max-height: 100%;
 }
 
+@media(min-width: 532px) {
+    .about-us {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-us__text, .photo-cps {
+        flex-basis: 47%;
+    }
+    .photo-cps {
+        border-radius: 6px;
+        margin-right: 16px;
+    }
+}
 @media(min-width: 768px) {
     .header {
         padding: 0 16px;
     }
-    .separator-1, .button__call, .button__chat, .button__profile {
+    .button-menu::after {
+        content: '';
+        width: 2px;
+        height: 32px;
+        margin: 0 12px;
+        background: #EAEAEA;
+        border-radius: 1px;
+    }
+    .button-call, .button-chat, .button-profile{
         display: flex;
     }
-    .title {
+    .main__title {
         padding-left: 20px; 
     }
-    .decay {
+    .tabs__nav::before {
         width: 20px;
     }
     .tabs__link.tabs__link--active{
@@ -235,14 +257,7 @@ button::-moz-focus-inner {
     .tabs__content {
         padding: 8px;
     }
-    .about-us {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .about-us__text, .photo-cps {
-        flex-basis: 47%;
-    }
-    .about-us__text--hdden--320 {
+    .about-us__text--hdden{
         display: block;
         padding-top: 1em;
     }
@@ -259,21 +274,33 @@ button::-moz-focus-inner {
 }
 @media(min-width: 1120px) {
     .header {
-        display: none;
+        position: absolute;
+        top: -300px;
     }
-    .title__buttons {
+    .header-requests-right {
         display: flex;
-        flex-direction: row;
+        position: absolute;
+        top: 327px;
+        right: -722px;
+        
     }
-    .button__request, .button__status {
-        display: flex;
-        flex-direction: row;
+    .button-request, .button-status {
         width: 200px;
+    }
+    .button-request {
+        margin-right: 4px;
+    }
+    .button__lable {
+        display: inline;
         font-family: 'TT Lakes-Medium';
         font-size: 16px;
     }
-    .title{
-        padding-left: 30px;
+    .button-request::before {
+        display: none;
+    }
+
+    .main__title{
+        padding-left: 20px;
     }
     .tabs__nav{
         flex-wrap: wrap;
@@ -283,10 +310,10 @@ button::-moz-focus-inner {
         margin-right: 15px;
     }
     .tabs__link:last-child {
-        margin-left: 8px;
-        margin-top: 10px;
+        margin-left: 26px;
+        margin-top: 6px;
     }
-    .decay, .decay__right {
+    .tabs__nav::before, .tabs__nav::after {
         display: none;
     }
     .about-us__text--hdden--768{

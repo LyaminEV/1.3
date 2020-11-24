@@ -3,97 +3,79 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя." />
-    <meta name="description" conent="ремонт техники, сервисный центр, ремот техники DELL" />
+        content="Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.">
+    <meta name="keywords" content="ремонт техники, сервисный центр, ремот техники DELL">
     <title>CPS</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
         <header class="header">
             <div class="block-left">
-                <button class="button button__menu">
-                    <div class="button__call-circle">
-                        <div class="button__menu-icon"></div>
-                    </div>
+                <button class="button button-menu">
+                    <span class="button__circle">
+                        <span class="button-menu__icon"></span>
+                    </span>
                 </button>
-                <div class="separator separator-1"></div>
                 <div class="logo">
-                    <a href="index.html" alt="На главную">
+                    <a href="index.html">
                         <div class="logo__icon"></div>
                     </a>
                 </div>
             </div>
             <div class="block-right">
-                <button class="button button__call">
-                    <div class="button__call-circle">
-                        <div class="button__call-icon"></div>
-                    </div>
-                </button>
-                <button class="button button__chat">
-                    <div class="button__call-circle">
-                        <div class="button__chat-icon"></div>
-                    </div>
-                </button>
-                <button class="button button__profile">
-                    <div class="button__call-circle">
-                        <div class="button__profile-icon"></div>
-                    </div>
-                </button>
-                <div class="separator separator-2"></div>
-                <button class="button button__request">
-                    <div class="button__call-circle">
-                        <div class="button__request-icon"></div>
-                    </div>
-                </button>
-                <button class="button button__status">
-                    <div class="button__call-circle">
-                        <div class="button__status-icon"></div>
-                    </div>
-                </button>
+                <div class="header-requests-left block-left">
+                    <button class="button button-call">
+                        <span class="button__circle">
+                            <span class="button-call__icon"></span>
+                        </span>
+                    </button>
+                    <button class="button button-chat">
+                        <span class="button__circle">
+                            <span class="button-chat__icon"></span>
+                        </span>
+                    </button>
+                    <button class="button button-profile">
+                        <span class="button__circle">
+                            <span class="button-profile__icon"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="header-requests-right block-right">
+                    <button class="button button-request">
+                        <span class="button__lable">Оставить заявку</span>
+                        <span class="button__circle">
+                            <span class="button-request__icon"></span>
+                        </span>
+                    </button>
+                    <button class="button button-status">
+                        <span class="button__lable">Статус ремонта</span>
+                        <span class="button__circle">
+                            <span class="button-status__icon"></span>
+                        </span>
+                    </button>
+                </div>
             </div>
         </header>
         <main class="main">
-            <div class="title">
-                <h1 class="title__text">Услуги и сервисы
-                </h1>
-                <div class="title__buttons">
-                    <button class="button button__request">
-                        <span>Оставить заявку</span>
-                        <div class="button__call-circle">
-                            <div class="button__request-icon"></div>
-                        </div>
-                    </button>
-                    <button class="button button__status">
-                        <span>Статус ремонта</span>
-                        <div class="button__call-circle">
-                            <div class="button__status-icon"></div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="tabs">
-                <div class="tabs__nav">
-                    <div class="decay"></div>
-                    <div class="decay decay__right"></div>
-                    <a class="tabs__link tabs__link--active" href="#about-us">Ремонтируемые бренды</a>
-                    <a class="tabs__link" href="#content-2">Дополнительные услуги</a>
-                    <a class="tabs__link" href="#content-3">Цены на услуги</a>
-                    <a class="tabs__link" href="#content-4">Адреса сервисных центров</a>
-                    <a class="tabs__link" href="#content-5">Специальные цены</a>
-                    <a class="tabs__link" href="#content-6">Отзывы</a>
-                </div>
-            </div>
+            <h1 class="main__title">Услуги и сервисы</h1>
+            <nav class="tabs__nav">
+                <a class="tabs__link tabs__link--active" href="#about-us">Ремонтируемые бренды</a>
+                <a class="tabs__link" href="#content-2">Дополнительные услуги</a>
+                <a class="tabs__link" href="#content-3">Цены на услуги</a>
+                <a class="tabs__link" href="#content-4">Адреса сервисных центров</a>
+                <a class="tabs__link" href="#content-5">Специальные цены</a>
+                <a class="tabs__link" href="#content-6">Отзывы</a>
+            </nav>
             <div class="tabs__content">
                 <div class="about-us" id="about-us">
                     <div class="about-us__text">
                         <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
                             отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-
-                        <p class="about-us__text--hdden--320">Мы успешно работаем с 1992 года и заслужили репутацию
+                        <p class="about-us__text--hdden">Мы успешно работаем с 1992 года и заслужили репутацию
                             надежного партнера
                             <span class="about-us__text--hdden--768">, что подтверждает
                                 большое
@@ -101,11 +83,9 @@
                                 и, в свою
                                 очередь, советуют нас родным и близким.</span>
                         </p>
-                        <div class="more">
-                            <button class="more__button">
-                                Читать далее
-                            </button>
-                        </div>
+                        <button class="more__button">
+                            Читать далее
+                        </button>
                     </div>
                     <div class="photo-cps">
                         <img src="img/photo-cps.png" alt="Фотография сервисного центра">
