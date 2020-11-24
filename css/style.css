@@ -40,7 +40,6 @@ button::-moz-focus-inner {
     border: 0;
 }
 .container {
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -139,8 +138,6 @@ button::-moz-focus-inner {
     font-family: 'TT Lakes-Bold';
     line-height: 40px;
 }
-
-
 .title__buttons {
     display: none;
 }
@@ -179,7 +176,6 @@ button::-moz-focus-inner {
     line-height: 36px;
     color: #7E7E82;
     ;
-
 }
 .tabs__link:last-child {
     margin-right: 0px;
@@ -216,7 +212,6 @@ button::-moz-focus-inner {
     max-width: 100%;
     max-height: 100%;
 }
-
 @media(min-width: 532px) {
     .about-us {
         flex-direction: row;
@@ -281,8 +276,7 @@ button::-moz-focus-inner {
         display: flex;
         position: absolute;
         top: 327px;
-        right: -722px;
-        
+        right: -722px;      
     }
     .button-request, .button-status {
         width: 200px;
@@ -298,7 +292,6 @@ button::-moz-focus-inner {
     .button-request::before {
         display: none;
     }
-
     .main__title{
         padding-left: 20px;
     }
