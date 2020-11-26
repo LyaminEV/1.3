@@ -281,10 +281,7 @@ button::-moz-focus-inner {
     .block-left {
         display: none;
     }
-    .button-request, .button-status {
-        flex-basis: content;
-    }
-    .button-request {
+    .header-requests-right .button:first-child  {
         margin-right: 27px;
     }
     .button__lable {
