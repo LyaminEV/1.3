@@ -1,23 +1,26 @@
 @font-face {
     font-family: 'TT Lakes';
-    src: url('../fonts/tt-lakes/TTLakes-Regular.eot');
-    src: url('../fonts/tt-lakes/TTLakes-Regular.woff') format('woff');
-    src: url('../fonts/tt-lakes/TTLakes-Regular.ttf') format('truetype');
-    font-weight: 400;
+    src: url('../fonts/TTLakes-Regular.woff') format('woff');
+    src: url('../fonts/TTLakes-Regular.eot');
+    src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'TT Lakes';
-    src: url('../fonts/tt-lakes/TTLakes-Medium.eot');
-    src: url('../fonts/tt-lakes/TTLakes-Medium.woff') format('woff');
-    src: url('../fonts/tt-lakes/TTLakes-Medium.ttf') format('truetype');
+    src: url('../fonts/TTLakes-Medium.woff') format('woff');
+    src: url('../fonts/TTLakes-Medium.eot');
+    src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
 }
 @font-face {
     font-family: 'TT Lakes';
-    src: url('../fonts/tt-lakes/TTLakes-Bold.eot');
-    src: url('../fonts/tt-lakes/TTLakes-Bold.woff') format('woff');
-    src: url('../fonts/tt-lakes/TTLakes-Bold.ttf') format('truetype');
+    src: url('../fonts/TTLakes-Bold.woff') format('woff');
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
     font-weight: 700;
+    font-style: normal;
 }
 html {
     box-sizing: border-box;
@@ -67,6 +70,7 @@ button::-moz-focus-inner {
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    font-family: 'TT Lakes';
 }
 .button:hover {
     opacity: 0.7;
@@ -74,19 +78,16 @@ button::-moz-focus-inner {
 .button__lable {
     display: none;
 }
-.button__circle{
+.button__icon{
     margin: 0 8px;
     width: 40px;
     height: 40px;
     background: #FF3E79;
     border-radius:  50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-.button-menu__icon {
-    width: 18px;
-    height: 16px;
+.button--menu{
     background-image: url(../img/burger-menu-icon.svg);
 }
 .logo {
@@ -97,26 +98,17 @@ button::-moz-focus-inner {
     height: 52px;
     background-image: url(../img/Logo.svg);
 }
-.button-call, .button-chat, .button-profile {
+.header-requests-left {
     display: none;
 }
-.button-call__icon {
-    width: 18px;
-    height: 18px;
+.button--call {
     background-image: url(../img/call-icon.svg);
 }
-.button-chat__icon {
-    width: 20px;
-    height: 20px;
+.button--chat {
     background-image: url(../img/chat-icon.svg);
 }
-.button-profile__icon {
-    width: 20px;
-    height: 18px;
+.button--profile {
     background-image: url(../img/profile-icon.svg);
-}
-.header-requests-right {
-    z-index: 10;
 }
 .header-requests-right::before{
     content: '';
@@ -126,14 +118,10 @@ button::-moz-focus-inner {
     background: #EAEAEA;
     border-radius: 1px;
 }
-.button-request__icon {
-    width: 20px;
-    height: 20px;
+.button--request {
     background-image: url(../img/request-icon.svg);
 }
-.button-status__icon {
-    width: 16px;
-    height: 20px;
+.button--status {
     background-image: url(../img/status-icon.svg);
 }
 .main__title {
@@ -213,6 +201,7 @@ button::-moz-focus-inner {
     padding-left: 24px;
     margin: 16px 0;
     background-color: transparent;
+    font-family: 'TT Lakes';
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -242,7 +231,7 @@ button::-moz-focus-inner {
     .header {
         padding: 0 16px;
     }
-    .button-menu::after {
+    .separator::after{
         content: '';
         width: 2px;
         height: 32px;
@@ -250,7 +239,7 @@ button::-moz-focus-inner {
         background: #EAEAEA;
         border-radius: 1px;
     }
-    .button-call, .button-chat, .button-profile{
+    .header-requests-left {
         display: flex;
     }
     .main__title {
