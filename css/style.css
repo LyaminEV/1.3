@@ -69,8 +69,13 @@ button::-moz-focus-inner {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
     font-family: 'TT Lakes';
+    margin: 0 8px;
+    width: 40px;
+    height: 40px;
+    border-radius:  50%;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 .button:hover {
     opacity: 0.7;
@@ -78,7 +83,7 @@ button::-moz-focus-inner {
 .button__lable {
     display: none;
 }
-.button__icon{
+/* .button__icon{
     margin: 0 8px;
     width: 40px;
     height: 40px;
@@ -86,12 +91,15 @@ button::-moz-focus-inner {
     border-radius:  50%;
     background-repeat: no-repeat;
     background-position: center center;
-}
-.button--menu{
+} */
+.header__button-menu{
     background-image: url(../img/burger-menu-icon.svg);
 }
 .logo {
-    margin: 0 4px 0 8px;
+    margin: 0 4px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .logo__icon {
     width: 97px;
@@ -101,13 +109,13 @@ button::-moz-focus-inner {
 .header-requests-left {
     display: none;
 }
-.button--call {
+.header__button-call {
     background-image: url(../img/call-icon.svg);
 }
-.button--chat {
+.header__button-chat {
     background-image: url(../img/chat-icon.svg);
 }
-.button--profile {
+.header__button-profile {
     background-image: url(../img/profile-icon.svg);
 }
 .header-requests-right::before{
@@ -118,10 +126,10 @@ button::-moz-focus-inner {
     background: #EAEAEA;
     border-radius: 1px;
 }
-.button--request {
+.header__button-request {
     background-image: url(../img/request-icon.svg);
 }
-.button--status {
+.header__button-status {
     background-image: url(../img/status-icon.svg);
 }
 .main__title {
@@ -139,19 +147,19 @@ button::-moz-focus-inner {
 .title__buttons {
     display: none;
 }
-.tabs__nav {
+.tabs {
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
 }
-.tabs__nav::before, .tabs__nav::after {
+.tabs::before, .tabs::after {
     content: "";
     position: absolute;
     width: 16px; /* меньше чем справа что бы рамку activ не осветляло(в ширину отступа)*/
     height: 40px; 
     background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); 
 }
-.tabs__nav::after {
+.tabs::after {
     width: 24px;
     right: 0;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
@@ -159,7 +167,7 @@ button::-moz-focus-inner {
 .tabs__item {
     list-style-type: none;
 }
-.tabs__link.tabs__link--active {
+.tabs__item.tabs__item--active {
     background-color: #ffffff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
@@ -169,7 +177,6 @@ button::-moz-focus-inner {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    margin-right: 20px;
     white-space: nowrap;
     text-decoration: none;
     font-weight: 500;
@@ -181,7 +188,7 @@ button::-moz-focus-inner {
 .tabs__item:last-child {
     margin-right: 0px;
 }
-.tabs__content {
+.content {
     margin: 24px 0;
 }
 .about-us{
@@ -196,7 +203,7 @@ button::-moz-focus-inner {
 .about-us__text--hidden {
     display: none;
 }
-.more__button {
+.more-button {
     border: 0;
     padding-left: 24px;
     margin: 16px 0;
@@ -231,11 +238,11 @@ button::-moz-focus-inner {
     .header {
         padding: 0 16px;
     }
-    .separator::after{
+    .separator::before{
         content: '';
         width: 2px;
         height: 32px;
-        margin: 0 12px;
+        margin-right: 20px;
         background: #EAEAEA;
         border-radius: 1px;
     }
@@ -245,13 +252,13 @@ button::-moz-focus-inner {
     .main__title {
         padding-left: 20px; 
     }
-    .tabs__nav::before {
+    .tabs::before {
         width: 20px;
     }
-    .tabs__link.tabs__link--active{
+    .tabs__item .tabs__item--active{
         margin-left: 24px;
     }
-    .tabs__content {
+    .content {
         padding: 8px;
     }
     .about-us__text--hidden{
@@ -284,11 +291,23 @@ button::-moz-focus-inner {
     .header-requests-right .button:first-child  {
         margin-right: 27px;
     }
+    .header__button-request, .header__button-status{
+        border-radius: 0;
+        font-family: 'TT Lakes';
+        font-weight: 500;
+        width: auto;
+        background-color: transparent;
+        background-position: right center;
+        font-size: 16px;
+        line-height: 24px;
+        padding-right: 40px;      
+    }
     .button__lable {
         display: inline;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
+        padding-right: 8px;
     }
     .header-requests-right::before {
         display: none;
@@ -296,18 +315,18 @@ button::-moz-focus-inner {
     .main__title{
         padding-left: 20px;
     }
-    .tabs__nav{
+    .tabs {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-    .tabs__link {
+    .tabs__item {
         margin-right: 12px;
     }
     .tabs__item:last-child {
-        margin-left: 24px;
+        margin-left: 18px;
         margin-top: 6px;
     }
-    .tabs__nav::before, .tabs__nav::after {
+    .tabs::before, .tabs::after {
         display: none;
     }
     .about-us__text--hidden--768{
