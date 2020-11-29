@@ -191,16 +191,16 @@ button::-moz-focus-inner {
 .content {
     margin: 24px 0;
 }
-.about-us{
+.about{
     display: flex;
     flex-direction: column;
 }
-.about-us__text {
+.about__block-txt {
     padding: 0 16px;
     line-height: 18px;
     line-height: 20px;
 }
-.about-us__text--hidden {
+.about__text:last-of-type {
     display: none;
 }
 .more-button {
@@ -222,11 +222,11 @@ button::-moz-focus-inner {
     max-height: 100%;
 }
 @media(min-width: 532px) {
-    .about-us {
+    .about {
         flex-direction: row;
         justify-content: space-between;
     }
-    .about-us__text, .photo-cps {
+    .about__block-txt, .photo-cps {
         flex-basis: 47%;
     }
     .photo-cps {
@@ -261,11 +261,11 @@ button::-moz-focus-inner {
     .content {
         padding: 8px;
     }
-    .about-us__text--hidden{
+    .about__text:last-of-type{
         display: block;
         padding-top: 1em;
     }
-    .about-us__text--hidden--768 {
+    .about__text-hidden {
         display: none;
     }
     .photo-cps {
@@ -329,7 +329,7 @@ button::-moz-focus-inner {
     .tabs::before, .tabs::after {
         display: none;
     }
-    .about-us__text--hidden--768{
+    .about__text-hidden{
         display: inline;
     }
 }
