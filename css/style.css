@@ -285,19 +285,6 @@ margin-bottom: 26px;
 .navigation__link--active {
     color: #7E7E82;
 }
-/* .navgation__link--active::before {
-    content: "";
-    height: 32px;
-    border-left: 4px solid #41F6D7;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    position: absolute;
-    left: -24px;
-    top: -5px;
-} */
-/* .menu-buttons .button--call {
-    margin-left: 0;
-} */
 .contacts {
     display: flex;
     flex-direction: column;
