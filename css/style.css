@@ -89,7 +89,7 @@ button::-moz-focus-inner {
     display: none;
 }
 .header__button, .communication__button {
-    margin-right: 16px;
+    margin: 8px 16px 8px 0;
 }
 .header__button--menu{
     background-image: url(../img/burger-menu-icon.svg);
@@ -115,6 +115,8 @@ button::-moz-focus-inner {
 }
 .communication__button--profile {
     background-image: url(../img/profile-icon.svg);
+}
+.communication__button:nth-child(5n) {
     margin-right: 0;
 }
 .header-requests-right::before{
@@ -168,7 +170,7 @@ button::-moz-focus-inner {
     background-color: #ffffff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
-    margin-left: 24px;
+    margin-left: 16px;
 }
 .tabs__link {
     display: flex;
@@ -220,7 +222,7 @@ button::-moz-focus-inner {
 /* !~~~~~~~~~~~~~~~~~~~~~~~MENU~~~~~~~~~~~~~~~~~~~~~~~ */
 .menu {
     width: 320px;
-    height: 100vh;
+    min-height: 100vh;
     padding: 19px 24px 32px;
     display: flex;
     flex-direction: column;
@@ -283,8 +285,8 @@ margin-bottom: 26px;
 .navigation__link--active {
     color: #7E7E82;
 }
-.menu-buttons .button-call {
-    margin-left: 0;
+.communication {
+    flex-wrap: wrap;
 }
 .contacts {
     display: flex;
@@ -337,7 +339,7 @@ margin-bottom: 26px;
 }
 @media(min-width: 768px) {
     .header {
-        padding: 0 16px;
+        padding: 0 24px;
     }
     .separator::before{
         content: '';
@@ -347,7 +349,7 @@ margin-bottom: 26px;
         background: #EAEAEA;
         border-radius: 1px;
     }
-    .header-requests-left {
+    .header .header-requests-left {
         display: flex;
     }
     .main__title {
@@ -356,7 +358,7 @@ margin-bottom: 26px;
     .tabs::before {
         width: 20px;
     }
-    .tabs__item .tabs__item--active{
+    .tabs__item--active{
         margin-left: 24px;
     }
     .content {
@@ -386,7 +388,7 @@ margin-bottom: 26px;
         margin-bottom: -92px;
         z-index: 1;
     }
-    .block-left {
+    .header .block-left {
         display: none;
     }
     .header__button--request {
