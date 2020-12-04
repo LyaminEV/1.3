@@ -228,7 +228,7 @@ button::-moz-focus-inner {
     letter-spacing: -0.2px;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
-.menu-header, .menu-buttons {
+.menu-header, .communication  {
     display: flex;
     flex-direction: row;
 }
@@ -285,10 +285,6 @@ margin-bottom: 26px;
 }
 .menu-buttons .button-call {
     margin-left: 0;
-}
-.communication {
-    display: flex;
-    flex-direction: row;
 }
 .contacts {
     display: flex;
