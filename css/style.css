@@ -88,12 +88,13 @@ button::-moz-focus-inner {
 .button__lable {
     display: none;
 }
-.button--menu{
+.header__button, .communication__button {
+    margin-right: 16px;
+}
+.header__button--menu{
     background-image: url(../img/burger-menu-icon.svg);
-    margin-right: 4px;
 }
 .logo {
-    margin: 0 4px 0 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,37 +104,33 @@ button::-moz-focus-inner {
     height: 52px;
     background-image: url(../img/Logo.svg);
 }
-.communication {
-    display: flex;
-    width: 152px;
-    justify-content: space-between;
-}
-.communication--hide  {
+.header .header-requests-left {
     display: none;
 }
-.button--call {
+.communication__button--call {
     background-image: url(../img/call-icon.svg);
 }
-.button--chat {
+.communication__button--chat {
     background-image: url(../img/chat-icon.svg);
 }
-.button--profile {
+.communication__button--profile {
     background-image: url(../img/profile-icon.svg);
+    margin-right: 0;
 }
-.requests::before{
+.header-requests-right::before{
     content: '';
     width: 2px;
-    height: 32px;
-    margin: 0 12px;
+    height: 32px; 
+    margin: 0 20px 0 16px;
     background: #EAEAEA;
-    border-radius: 1px;
+
 }
-.button--request {
+.header__button--request {
     background-image: url(../img/request-icon.svg);
-    margin-right: 16px;
 }
-.button--status {
+.header__button--status {
     background-image: url(../img/status-icon.svg);
+    margin-right: 0;
 }
 .main__title {
     border-left: 4px solid  #41F6D7;
@@ -171,7 +168,7 @@ button::-moz-focus-inner {
     background-color: #ffffff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
-    margin-left: 16px;
+    margin-left: 24px;
 }
 .tabs__link {
     display: flex;
@@ -231,29 +228,33 @@ button::-moz-focus-inner {
     letter-spacing: -0.2px;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
-.menu__header {
+.menu-header, .menu-buttons {
     display: flex;
     flex-direction: row;
 }
-.menu__header {
+.menu-header {
     padding-bottom: 40px;
     align-items: center;
-    justify-content: space-between;
 }
 .button--close {
     margin-left: 0;
     background-image: url(../img/burger-menu-close-icon.svg);
 }
+.menu__logo {
+    margin-left: 16px;
+}
 .button--search {
-    margin-right: 0;
-    background-image: url(../img/search-icon.svg);
     margin-left: auto;
+    background-image: url(../img/search-icon.svg);
+}
+.menu__header {
+    justify-content: space-between;
 }
 .navigation {
     flex-grow: 1;
 }
 .navigation__list {
-    margin-bottom: 32px;
+    padding-bottom: 32px;
 }
 .navigation__item {
 font-family: 'TT Lakes';
@@ -262,9 +263,6 @@ font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 margin-bottom: 26px;
-}
-.navigation__item:last-child {
-    margin-bottom: 0;
 }
 .navigation__item--active {
     position: relative;
@@ -277,13 +275,20 @@ margin-bottom: 26px;
     border-bottom: 4px solid transparent;
     position: absolute;
     left: -24px;
-    top: -5px;  
+    top: -5px;
 }
 .navigation__link {
     color: #1B1C21;
 }
 .navigation__link--active {
     color: #7E7E82;
+}
+.menu-buttons .button-call {
+    margin-left: 0;
+}
+.communication {
+    display: flex;
+    flex-direction: row;
 }
 .contacts {
     display: flex;
@@ -336,7 +341,7 @@ margin-bottom: 26px;
 }
 @media(min-width: 768px) {
     .header {
-        padding: 0 24px;
+        padding: 0 16px;
     }
     .separator::before{
         content: '';
@@ -346,7 +351,7 @@ margin-bottom: 26px;
         background: #EAEAEA;
         border-radius: 1px;
     }
-    .communication {
+    .header-requests-left {
         display: flex;
     }
     .main__title {
@@ -355,7 +360,7 @@ margin-bottom: 26px;
     .tabs::before {
         width: 20px;
     }
-    .tabs__item--active{
+    .tabs__item .tabs__item--active{
         margin-left: 24px;
     }
     .content {
@@ -388,10 +393,10 @@ margin-bottom: 26px;
     .block-left {
         display: none;
     }
-    .requests .button:first-child  {
+    .header__button--request {
         margin-right: 27px;
     }
-    .button--request, .button--status {
+    .header__button--request, .header__button--status {
         border-radius: 0;
         font-family: 'TT Lakes';
         font-weight: 500;
@@ -409,7 +414,7 @@ margin-bottom: 26px;
         line-height: 24px;
         padding-right: 8px;
     }
-    .requests::before {
+    .header-requests-right::before {
         display: none;
     }
     .main__title{
@@ -423,7 +428,7 @@ margin-bottom: 26px;
         margin-right: 12px;
     }
     .tabs__item:last-child {
-        margin-left: 18px;
+        margin-left: 26px;
         margin-top: 6px;
     }
     .tabs::before, .tabs::after {
