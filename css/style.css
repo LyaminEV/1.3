@@ -336,25 +336,34 @@ margin-bottom: 26px;
     background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
     border-top: 1px solid #D9FFF5;
 }
-.brands-container {
-    padding-top: 16px;
+.brands__container {
     padding-bottom: 28px;
 }
-.brands-list::after {
-    content: '';
+.brands__container::before, .brands__container::after {
+    content: "";
+    position: absolute;
+    width: 16px; /* меньше чем справа что бы рамку activ не осветляло(в ширину отступа)*/
+    height: 74px; 
+    background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); 
+    left: 0;
+    z-index: 5;
+}
+.brands__container::after {
     width: 24px;
-    height: 72px;
-    right:0;
+    bottom: 28px;
+    left: 296px;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
+.brands__list {
+    padding: 16px ;
+}
 .brands__item {
-    width: 240px !important;
+    width: 240px;
     height: 72px;
     display: flex;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
-    margin-left: 16px;
     
 }
 .brands__link {
