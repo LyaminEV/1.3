@@ -346,12 +346,15 @@ margin-bottom: 26px;
     height: 74px; 
     background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); 
     left: 0;
+    top: 16px;
     z-index: 5;
 }
 .brands__container::after {
     width: 24px;
-    bottom: 28px;
-    left: 296px;
+    bottom: 44px;
+    /* left: 296px; */
+    margin-left: auto;
+    right: 0;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
 .brands__list {
@@ -433,6 +436,8 @@ margin-bottom: 26px;
     .photo-cps img {
         border-radius: 6px;
     }
+    /* !~~~~~~~~~~~~~~~~~~~~~~~BRANDS-768~~~~~~~~~~~~~~~~~~~~~~~ */
+
 }
 @media(min-width: 1120px) {
     .header {
