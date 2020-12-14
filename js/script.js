@@ -18,7 +18,7 @@ button.addEventListener('click', function () {
         button.textContent = 'Скрыть';
     } else {
         brandList.classList.remove('brands__list--open');
-        
+        button.textContent = 'Показать все';
     }
 });
 
