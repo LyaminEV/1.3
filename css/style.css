@@ -219,6 +219,9 @@ button::-moz-focus-inner {
     max-width: 100%;
     max-height: 100%;
 }
+.reverse {
+    
+}
 /* !~~~~~~~~~~~~~~~~~~~~~~~MENU~~~~~~~~~~~~~~~~~~~~~~~ */
 .menu {
     width: 320px;
@@ -342,7 +345,7 @@ margin-bottom: 26px;
 .brands__container::before, .brands__container::after {
     content: "";
     position: absolute;
-    width: 16px; /* меньше чем справа что бы рамку activ не осветляло(в ширину отступа)*/
+    width: 16px; 
     height: 74px; 
     background: linear-gradient(90deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); 
     left: 0;
@@ -352,7 +355,6 @@ margin-bottom: 26px;
 .brands__container::after {
     width: 24px;
     bottom: 44px;
-    /* left: 296px; */
     margin-left: auto;
     right: 0;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
@@ -437,7 +439,41 @@ margin-bottom: 26px;
         border-radius: 6px;
     }
     /* !~~~~~~~~~~~~~~~~~~~~~~~BRANDS-768~~~~~~~~~~~~~~~~~~~~~~~ */
-
+    .title {
+        padding: 16px 24px;
+    }
+    .brands__list {
+        height: 184px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 24px;
+    }
+    .brands__list--open {
+        height: auto;
+    }
+    .swiper-wrapper {
+        box-sizing: border-box;
+    }
+    .brands__item {
+        margin-right: 24px;
+        flex-basis: 31.1%;
+        margin-bottom: 16px;
+    }
+    .brands__item:nth-child(3n) {
+        margin-right: 0;
+    }
+    .brands__container::before, .brands__container::after, .swiper-pagination {
+        display: none;
+    }
+    .brands__button--hide {
+        display: flex;
+    }
+    .brands__button {
+        margin-left: 24px;
+    }
 }
 @media(min-width: 1120px) {
     .header {
@@ -494,5 +530,17 @@ margin-bottom: 26px;
     }
     .about__text-hidden{
         display: inline;
+    }
+    /* !~~~~~~~~~~~~~~~~~~~~~~~BRANDS-1120~~~~~~~~~~~~~~~~~~~~~~~ */
+    .brands__item {
+        margin-right: 32px;
+        flex-basis: 22.7%;
+        margin-bottom: 16px;
+    }
+    .brands__item:nth-child(3n) {
+        margin-right: 32px ;
+    }
+    .brands__item:nth-child(4n) {
+        margin-right: 0;
     }
 }
