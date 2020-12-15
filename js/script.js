@@ -10,15 +10,18 @@ if (screen.width < 768) {
     });
 }
 let brandList = document.querySelector('.brands__list');
-let button = document.querySelector('.brands__button');
-let buttonText = button.textContent = 'Показать все';
+let button = document.querySelector('.more-button');
+
 button.addEventListener('click', function () {
+    let buttonText = button.textContent;
     if (buttonText  === 'Показать все') {
         brandList.classList.add('brands__list--open');
         button.textContent = 'Скрыть';
+        button.classList.add('rotate');
     } else {
         brandList.classList.remove('brands__list--open');
         button.textContent = 'Показать все';
+        button.classList.remove('rotate');
     }
 });
 

@@ -211,9 +211,21 @@ button::-moz-focus-inner {
     font-size: 16px;
     line-height: 24px;
     cursor: pointer;
+    position: relative;
+}
+.more-button::before {
+    content: '';
+    width: 8px;
+    height: 11px;
+    position: absolute;
+    top: 7px;
+    left: 0;
     background-image: url(../img/read-more-icon.svg);
     background-position: left center;
     background-repeat: no-repeat;
+}
+.more-button.rotate::before {
+    transform: rotate(180deg);
 }
 .photo-cps img {
     max-width: 100%;
@@ -357,7 +369,7 @@ margin-bottom: 26px;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
 .brands__list {
-    padding: 16px ;
+    padding: 16px;
 }
 .brands__item {
     width: 240px;
@@ -440,7 +452,7 @@ margin-bottom: 26px;
         padding: 16px 24px;
     }
     .brands__list {
-        height: 184px;
+        height: 200px;
         overflow: hidden;
         display: flex;
         flex-direction: row;
